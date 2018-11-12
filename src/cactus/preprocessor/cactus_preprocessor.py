@@ -114,7 +114,7 @@ class PreprocessSequence(RoundedJob):
         elif self.prepOptions.preprocessJob == "lastzRepeatMask":
             repeatMaskOptions = RepeatMaskOptions(proportionSampled=proportionSampled,
                                                   minPeriod=self.prepOptions.minPeriod,
-						  lastzOpts=self.prepOptions.lastzOptions)
+                                                  lastzOpts=self.prepOptions.lastzOptions)
             return LastzRepeatMaskJob(repeatMaskOptions=repeatMaskOptions,
                                       queryID=inChunkID,
                                       targetIDs=seqIDs)
